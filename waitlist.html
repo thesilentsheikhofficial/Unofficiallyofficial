@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Waitlist — UnofficiallyOfficial</title>
+  <meta name="description" content="Join the UnofficiallyOfficial waitlist for limited drops and early access." />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">UnofficiallyOfficial</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="card center">
+        <h2 style="font-family:'Bebas Neue',sans-serif; margin:0 0 .6rem 0;">Founding Waitlist</h2>
+        <p class="lead" style="margin:0 0 1rem 0;">Enter your email below to get notified about drops and receive priority access.</p>
+
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="waitlist-form">
+          <input type="email" name="email" placeholder="you@domain.com" required />
+          <button type="submit" class="btn">Join Waitlist</button>
+          <input type="hidden" name="_subject" value="UnofficiallyOfficial Waitlist">
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="small">© UnofficiallyOfficial <span id="year"></span></div>
+      <div class="socials">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a href="https://discord.com/invite/" target="_blank" rel="noopener noreferrer">Discord</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="countdown.js"></script>
+</body>
+</html>
