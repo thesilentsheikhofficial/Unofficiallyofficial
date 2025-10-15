@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UnofficiallyOfficial — Launch</title>
+  <meta name="description" content="UnofficiallyOfficial — limited drops inspired by streetwear and organic design." />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">UnofficiallyOfficial</div>
+      <nav class="nav">
+        <a href="waitlist.html">Join Waitlist</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-card">
+          <h1 class="headline">Unofficial. Grounded. Limited.</h1>
+          <p class="lead">Small-batch drops rooted in urban nature and crafted with care. Join our waitlist for early access and first dibs on releases.</p>
+
+          <div class="cta-row">
+            <a class="btn" href="waitlist.html">Join Waitlist</a>
+            <button id="launchBtn" class="btn secondary">Launch Date</button>
+          </div>
+        </div>
+
+        <aside class="countdown-panel">
+          <div class="countdown-title">Next Launch</div>
+          <div id="countdown" class="countdown"></div>
+          <div id="launchDate" class="launch-date" style="display:none;">Launching on: 1 March</div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h3 style="margin-top:0; font-family:'Bebas Neue',sans-serif;">About the Drops</h3>
+        <p class="small">Each release is limited. We prioritize sustainable sourcing and thoughtful design. Being on the waitlist gives you priority access and early notifications.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="small">© UnofficiallyOfficial <span id="year"></span></div>
+      <div class="socials">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a href="https://discord.com/invite/" target="_blank" rel="noopener noreferrer">Discord</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="countdown.js"></script>
+</body>
+</html>
