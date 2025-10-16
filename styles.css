@@ -1,19 +1,23 @@
 :root {
-  --bg: #07332c;      /* deep green background */
-  --accent: #485b46;  /* muted olive for accents */
-  --muted: #9fb39f;   /* light olive for subtle elements */
-  --text: #ededed;    /* off-white for text */
+  --bg: #07332c;
+  --accent: #485b46;
+  --muted: #9fb39f;
+  --text: #ededed;
   --card: rgba(255, 255, 255, 0.03);
   --glass: rgba(255, 255, 255, 0.03);
   --radius: 12px;
   --max-width: 1100px;
+
+  /* ✅ Fluid Typography */
+  --fs-base: clamp(0.95rem, 0.8vw + 0.8rem, 1.1rem);
+  --fs-headline: clamp(2.2rem, 5vw + 1rem, 4rem);
 }
 
 /* Reset & Base */
-* { box-sizing: border-box; }
-html, body { height: 100%; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; scroll-behavior: smooth; }
+
 body {
-  margin: 0;
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   background: linear-gradient(180deg, var(--bg) 0%, #052a26 100%);
   color: var(--text);
@@ -23,6 +27,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-size: var(--fs-base);
 }
 
 /* Container */
@@ -30,7 +35,7 @@ body {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 2rem;
+  padding: clamp(1rem, 3vw, 2rem);
 }
 
 /* Header */
@@ -48,10 +53,11 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 .logo {
   font-family: "Bebas Neue", "Oswald", "Impact", sans-serif;
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 2.5vw, 2.5rem);
   color: var(--text);
   letter-spacing: 1px;
 }
@@ -59,6 +65,8 @@ body {
   display: flex;
   gap: 1rem;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .nav a {
   color: var(--text);
@@ -80,7 +88,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem 0;
+  padding: clamp(3rem, 6vw, 5rem) 0;
 }
 .hero-grid {
   display: grid;
@@ -92,12 +100,12 @@ body {
 .hero-card {
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
   border-radius: var(--radius);
-  padding: 2.25rem;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
   box-shadow: 0 8px 30px rgba(2,10,8,0.45);
 }
 .headline {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 3.8rem;
+  font-size: var(--fs-headline);
   line-height: 1;
   margin: 0 0 .6rem 0;
   color: var(--text);
@@ -105,7 +113,7 @@ body {
 }
 .lead {
   color: #dce7e3;
-  font-size: 1.05rem;
+  font-size: clamp(0.95rem, 1vw, 1.1rem);
   margin-bottom: 1.2rem;
   max-width: 54ch;
 }
@@ -138,15 +146,13 @@ body {
   transform: translateY(-4px);
   opacity: 0.99;
 }
-.btn:active {
-  transform: translateY(-1px);
-}
+.btn:active { transform: translateY(-1px); }
 
 /* Countdown Panel */
 .countdown-panel {
   background: var(--glass);
   border: 1px solid rgba(255,255,255,0.04);
-  padding: 1.6rem;
+  padding: clamp(1.2rem, 2vw, 1.6rem);
   border-radius: 12px;
   text-align: center;
 }
@@ -157,40 +163,35 @@ body {
 }
 .countdown {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   color: var(--text);
   opacity: 0;
   transform: translateY(8px);
   transition: all .4s ease;
 }
-.countdown.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+.countdown.show { opacity: 1; transform: translateY(0); }
 .launch-date {
   color: #dfeee9;
   margin-top: .6rem;
   opacity: 0;
   transition: opacity .4s ease;
 }
-.launch-date.show {
-  opacity: 0.9;
-}
+.launch-date.show { opacity: 0.9; }
 
 /* Sections */
 .section {
-  padding: 3.25rem 0;
+  padding: clamp(2rem, 5vw, 3.25rem) 0;
   width: 100%;
 }
 .card {
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
   border-radius: 12px;
-  padding: 2rem;
+  padding: clamp(1.5rem, 3vw, 2rem);
   border: 1px solid rgba(255,255,255,0.03);
   box-shadow: 0 8px 30px rgba(2,10,8,0.35);
 }
 
-/* ✅ Center Fix for Waitlist Card */
+/* Waitlist */
 .waitlist .card {
   display: flex;
   flex-direction: column;
@@ -214,22 +215,19 @@ body {
 }
 .waitlist-form {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
   margin-top: 1.5rem;
 }
-
-/* Waitlist Form Inputs */
 .waitlist input[type="email"] {
   padding: .9rem 1rem;
   border-radius: 10px;
   border: 1px solid rgba(255,255,255,0.04);
   background: rgba(255,255,255,0.02);
   color: var(--text);
-  width: 320px;
+  width: min(320px, 100%);
   outline: none;
   transition: box-shadow .18s ease, border-color .18s ease;
 }
@@ -238,7 +236,7 @@ body {
   border-color: var(--accent);
 }
 
-/* FAQ Styling */
+/* FAQ */
 .faq-list {
   display: grid;
   gap: 1rem;
@@ -271,6 +269,7 @@ body {
 }
 .footer-inner {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
@@ -280,6 +279,7 @@ body {
 }
 .footer .socials {
   display: flex;
+  flex-wrap: wrap;
   gap: .8rem;
   align-items: center;
 }
@@ -300,14 +300,32 @@ body {
 .center { text-align: center; }
 .small { font-size: .9rem; color: #cfe5df; }
 
-/* Responsive */
-@media (max-width:1000px) {
-  .hero-grid { grid-template-columns: 1fr; }
-  .headline { font-size: 3rem; }
-  .countdown-panel { margin-top: 1rem; }
+/* ✅ Responsive Enhancements */
+@media (max-width: 1400px) {
+  .hero-grid { grid-template-columns: 1fr 360px; }
 }
-@media (max-width:560px) {
-  .headline { font-size: 2.2rem; }
+
+@media (max-width: 1000px) {
+  .hero-grid { grid-template-columns: 1fr; text-align: center; }
+  .headline { font-size: clamp(2rem, 5vw, 3rem); }
+  .countdown-panel { margin-top: 1.5rem; }
+}
+
+@media (max-width: 768px) {
+  .header-inner { flex-direction: column; text-align: center; }
+  .nav { justify-content: center; }
+  .footer-inner { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 560px) {
+  .headline { font-size: clamp(1.8rem, 6vw, 2.4rem); }
   .container { padding: 1rem; }
   .waitlist input[type="email"] { width: 100%; }
+  .cta-row { flex-direction: column; }
+}
+
+@media (max-width: 400px) {
+  .btn { width: 100%; text-align: center; }
+  .logo { font-size: 1.8rem; }
+  .nav a { font-size: 0.9rem; }
 }
