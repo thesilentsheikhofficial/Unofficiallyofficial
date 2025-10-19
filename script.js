@@ -93,3 +93,13 @@ window.addEventListener('scroll', () => {
     header.classList.remove('scrolled');
   }
 });
+// ===== MOBILE MENU TOGGLE =====
+const menuToggle = document.querySelector('.menu-toggle');
+const mobileNav = document.querySelector('.mobile-nav');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  mobileNav.classList.toggle('show');
+});
+
+
