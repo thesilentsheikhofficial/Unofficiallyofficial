@@ -14,21 +14,39 @@
 
 <body class="page">
   <header class="site-header">
-    <div class="container header-row">
-      <a class="brand" href="#" aria-label="UnofficiallyOfficial home">
-        <span class="brand-mark">UO</span>
-        <span class="brand-name">UnofficiallyOfficial</span>
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#drops">Drops</a>
-        <a href="#values">Values</a>
-        <a href="#faq">FAQ</a>
-        <a href="#join" class="cta">Join Waitlist</a>
-      </nav>
-    </div>
-  </header>
+  <div class="container header-row">
+    <a href="#" class="brand">
+      <span class="brand-mark">UO</span>
+      <span class="brand-name">UnofficiallyOfficial</span>
+    </a>
 
+    <!-- Desktop Nav -->
+    <nav class="nav desktop-nav">
+      <a href="#about">About</a>
+      <a href="#mission">Mission</a>
+      <a href="#drops">Drops</a>
+      <a href="#faq">FAQ</a>
+      <a href="#waitlist" class="cta">Join Waitlist</a>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="menu-toggle" aria-label="Toggle Menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Nav -->
+  <nav class="nav mobile-nav">
+    <a href="#about">About</a>
+    <a href="#mission">Mission</a>
+    <a href="#drops">Drops</a>
+    <a href="#faq">FAQ</a>
+    <a href="#waitlist" class="cta">Join Waitlist</a>
+  </nav>
+</header>
+  
   <main>
     <!-- HERO -->
     <section class="hero" id="home" aria-labelledby="hero-heading">
@@ -216,42 +234,43 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand footer-brand" href="#" aria-label="UnofficiallyOfficial home">
-          <span class="brand-mark">UO</span>
-          <span class="brand-name">UnofficiallyOfficial</span>
-        </a>
-        <p class="muted">Quietly powerful. Boldly authentic.</p>
-      </div>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand-block">
+      <a href="#" class="brand footer-brand">
+        <span class="brand-mark">UO</span>
+        <span class="brand-name">UnofficiallyOfficial</span>
+      </a>
+      <p class="footer-tagline">“You don’t need permission to be real.”</p>
+    </div>
 
-      <div class="footer-links">
-        <a href="#about">About</a>
-        <a href="#drops">Drops</a>
-        <a href="#values">Values</a>
-        <a href="#faq">FAQ</a>
-        <a href="#" id="privacy">Privacy</a>
-      </div>
+    <nav class="footer-links">
+      <a href="#about">About</a>
+      <a href="#drops">Drops</a>
+      <a href="#values">Values</a>
+      <a href="#faq">FAQ</a>
+      <a href="#join">Join Waitlist</a>
+    </nav>
 
-<div class="social">
-  <p class="muted">Follow</p>
-  <div class="social-icons" aria-hidden="true">
-        <a href="https://www.instagram.com/unofficiallyofficialmerch?igsh=MW5oOXJzcmRsaGs0eQ==" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.youtube.com/channel/UCEuOwx1f48HHIjJpLQp_t5g" target="_blank" rel="noopener noreferrer">Youtube</a>
-        <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a>
-        <a href="https://open.spotify.com/user/31tdthrqzey3d5d2shrhrzo7mvmq" target="_blank" rel="noopener noreferrer">Spotify</a>
-        <a href="https://discord.com/channels/unofficallyofficialmerch" target="_blank" rel="noopener noreferrer">Discord</a>
+    <div class="footer-social">
+      <p class="muted">Follow</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/unofficiallyofficialmerch?igsh=MW5oOXJzcmRsaGs0eQ==" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCEuOwx1f48HHIjJpLQp_t5g" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://open.spotify.com/user/31tdthrqzey3d5d2shrhrzo7mvmq" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-spotify"></i></a>
+        <a href="https://discord.com/channels/unofficallyofficialmerch" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i></a>
+      </div>
+    </div>
   </div>
-</div>
 
-    </div>
+  <div class="container copyright">
+    <small>© <span id="year"></span> UnofficiallyOfficial. All rights reserved.</small>
+  </div>
+</footer>
 
-    <div class="container copyright">
-      <small>© <span id="year"></span> UnofficiallyOfficial. All rights reserved.</small>
-    </div>
-  </footer>
 
   <script src="script.js" defer></script>
 </body>
 </html>
+
